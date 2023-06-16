@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  api: 
+    build: 
+      context: .
+      dockerfile: RestApiTestTask/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5112/  
+    ports: 
+      - "5112:5112"
